@@ -1,0 +1,33 @@
+<form name="criarForm" class="criarBackground" novalidate >
+    <div class="titleWrapper">
+        <h3>Cadastre um novo usuário!</h3>
+        <img class="close" src="app/public/close.svg" alt="Close Icon" ng-click="cancel()"/>
+    </div>
+    <md-input-container class="input" >
+      <label>Código</label>
+      <input name="Codigo" md-no-asterisk ng-model="user.Codigo" >
+    </md-input-container>
+    <md-input-container class="input" >
+      <label>Nome</label>
+      <input name="Nome" md-no-asterisk ng-model="user.Nome" required >
+      <div ng-messages="criarForm.Nome.$error">
+        <div ng-message="required">Campo obrigatório</div>
+      </div>
+    </md-input-container>
+    <md-input-container class="input" >
+      <label>CPF</label>
+      <input name="Cpf" md-no-asterisk ng-model="user.Cpf" required cpf >
+      <div ng-messages="criarForm.Cpf.$error">
+        <div ng-message="required">Campo obrigatório</div>
+      </div>
+    </md-input-container>
+    <md-input-container class="input" >
+      <label>Endereço</label>
+      <input name="Endereco" md-no-asterisk ng-model="user.Endereco" >
+    </md-input-container>
+    <md-input-container class="input" >
+      <label>Telefone</label>
+      <input name="Telefone" md-no-asterisk ng-model="user.Telefone" telefone >
+    </md-input-container>
+    <md-button class="button" type="submit" ng-click="cadastrar(user)">Cadastrar</md-button>
+  </form>

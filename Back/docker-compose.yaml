@@ -1,0 +1,15 @@
+﻿services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+  database:
+    image: mongo
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: mongodbrootusername
+        MONGO_INITDB_ROOT_PASSWORD: mongodbrootpassword
+    ports:
+        - "27017:27017"
+networks:
+  default:
+      name: testeNetwork

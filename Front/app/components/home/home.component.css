@@ -1,0 +1,60 @@
+.homeBackground{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popupContainer {
+    position: relative;
+}
+
+.loginBackground{
+    min-width: 300px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px 36px;
+}
+
+.titulowrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.titulo{
+    color: firebrick;
+    text-align: start;
+    margin: 0;
+    font-weight: bold;
+}
+
+img{
+    max-height: 200px;
+    width: 100%;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    color: white;
+}
+
+.checkbox{
+    font-weight: bold;
+    color: rgba(0,0,0,0.54);
+}

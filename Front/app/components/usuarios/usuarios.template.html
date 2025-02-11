@@ -1,0 +1,35 @@
+<div class="usuariosWrapper" ng-controller="UsuariosController as home" id="popupContainer">
+    <div class="topWrapper" >
+        <md-button class="md-primary smallButton md-raised miniButton" ng-click="showAdvanced($event)">
+            Cadastrar Usuário
+        </md-button>
+        <md-button class="md-secondary nomargin md-raised miniButton" ng-click="logout()">
+            Sair
+        </md-button>
+    </div>
+
+    <div class="bottomWrapper">
+        <div class="tableWrapper">
+    <table st-table="usuarios" class="tableClass">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+        </thead>
+            <tbody>
+                <tr ng-repeat="usuario in usuarios">
+                     <td>{{usuario.codigo}}</td>
+                     <td>{{ usuario.nome }}</td>
+                     <td>{{ usuario.cpf }}</td>
+                     <td>{{ usuario.endereco }}</td>
+                     <td>{{ usuario.telefone }}</td>
+                </tr>
+            </tbody>
+    </table>
+        </div>
+    </div>
+</div>

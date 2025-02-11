@@ -1,0 +1,35 @@
+<div ng-controller="HomeController as ctrl">
+    <div class="homeBackground">
+            <form class="loginBackground" name="userForm" novalidate >
+<!--            <label>Usuário: <input type="text" ng-model="user.usuario" /></label><br />-->
+<!--            <label>Senha: <input type="password" ng-model="user.senha" /></label><br />-->
+<!--            <label><input type="checkbox" ng-model="user.lembrar" /> Manter logado.</label><br />-->
+            <div class="titulowrapper">
+                <img src="app/public/home.svg" alt="Imagem de bem-vindo" >
+                <h2 class="titulo">
+                    Bem Vindo!
+                </h2>
+            </div>
+            <md-input-container class="input" >
+                <label>Usuário</label>
+                <input name="usuario" md-no-asterisk ng-model="user.usuario" required>
+                <div ng-messages="userForm.usuario.$error">
+                    <div ng-message="required">Campo obrigatório</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="input"  >
+                <label>Senha</label>
+                <input required name="senha" type="password" md-no-asterisk ng-model="user.senha" >
+                <div ng-messages="userForm.senha.$error">
+                    <div ng-message="required">Campo obrigatório</div>
+                </div>
+            </md-input-container>
+            <md-checkbox class="checkbox" ng-model="user.lembrar" aria-label="Manter logado.">Manter logado.</md-checkbox>
+
+            <md-button class="button" type="submit" ng-click="login(user)">Login</md-button>
+
+<!--            <pre>user = {{user | json}}</pre>-->
+<!--            <pre>master = {{master | json}}</pre>-->
+        </form>
+    </div>
+</div>

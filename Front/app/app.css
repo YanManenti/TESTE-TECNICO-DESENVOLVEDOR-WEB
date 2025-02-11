@@ -1,0 +1,66 @@
+*{
+    font-family: Inter, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #dfdfdf;
+}
+
+.button{
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+    font-weight: bolder;
+    color: white;
+    background-color: firebrick!important;
+}
+
+.smallButton{
+    margin: 0;
+    border-radius: 12px;
+    font-weight: bolder;
+    color: white!important;
+    background-color: firebrick!important;
+}
+
+.nomargin{
+    margin: 0;
+}
+
+.miniButton{
+    border-radius: 12px;
+    font-weight: bolder;
+}
+
+.input{
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+._md{
+    border-radius: 12px;
+}
+
+md-toast.md-success-toast-theme {
+    .md-toast-content {
+        background-color: green;
+        color:white;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: medium;
+    }
+}
+
+md-toast.md-error-toast-theme {
+    .md-toast-content {
+        background-color: darkred;
+        color:white;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: medium;
+    }
+}

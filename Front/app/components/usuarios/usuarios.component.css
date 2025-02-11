@@ -1,0 +1,97 @@
+.usuariosWrapper{
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subheader{
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    width: 100%;
+    padding: 25px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid #666666;
+}
+
+.wrapper{
+    width: calc(100% - 32px);
+    margin: 0 16px;
+}
+
+.cells{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+    text-transform: none;
+    white-space: normal;
+    margin: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.topWrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+    max-height: 48px;
+    gap: 12px;
+}
+
+.topWrapper *{
+    font-weight: bold;
+}
+.bottomWrapper{
+    max-height: calc(100vh - 96px - 48px - 12px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px 24px;
+}
+
+.tableWrapper{
+    max-height: calc(100vh - 96px - 48px - 48px - 12px);
+    overflow-y: auto;
+}
+
+.tableClass{
+    border-spacing: 0;
+    width: calc(100% - 3px);
+    max-height: 200px;
+}
+
+.scroller{
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+th{
+    position: sticky;
+    z-index: 10;
+    background-color: #e4e4e4;
+    top:0;
+}
+
+td{
+    max-width: 50px;
+    word-break: break-word;
+}
+
+th,td{
+    padding: 16px;
+    border-bottom: 1px solid #666666;
+}
+
+.tableClass tbody tr td{
+    text-align: center;
+}
