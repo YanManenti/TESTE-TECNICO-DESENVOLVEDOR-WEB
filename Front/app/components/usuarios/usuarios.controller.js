@@ -17,11 +17,9 @@ controller('UsuariosController',['$scope','$location','$http','$interval','$mdDi
             url: 'http://localhost:8080/api/usuario/buscartodos'
         }).then(function successCallback(response) {
             $scope.usuarios=response.data;
-            console.log($scope.usuarios);
         }
         ).catch(function errorCallback(response) {
             Toast.showErrorToast(response.data.detail);
-            console.log(response);
         })
     }
 
@@ -51,7 +49,6 @@ controller('UsuariosController',['$scope','$location','$http','$interval','$mdDi
 
 
         $scope.cadastrar = function (user) {
-            console.log('called')
             $scope.master = angular.copy(user);
             $http({
                 method: 'POST',
@@ -65,8 +62,14 @@ controller('UsuariosController',['$scope','$location','$http','$interval','$mdDi
                     $scope.hide();
                 }
             ).catch(function errorCallback(response) {
-                Toast.showErrorToast(response.data.detail);
-                console.log(response);
+                if(response.status === 400){
+                    if(!response.data.title){
+                        Toast.showErrorToast(response.data);
+                    }
+                }
+                if(response.status === 500){
+                    Toast.showErrorToast(response.data.detail);
+                }
             })
         };
     }
